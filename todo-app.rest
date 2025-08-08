@@ -15,10 +15,33 @@ POST http://localhost:5000/auth/login
 Content-Type: application/json
 
 {
-    "username":"testuser6@gmail.com",
-    "password":"1234567"
+    "username":"testuser1@gmail.com",
+    "password":"123456"
 }
 
 ### fetch all the todos of a user
 GET http://localhost:5000/todo
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzU0NjUxMjgyLCJleHAiOjE3NTQ3Mzc2ODJ9.iVsXdDQKzTKfSb9AGiW_ZhN4UTw3sCfYijGu-R4A1J4
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzU0NjUzMjM3LCJleHAiOjE3NTQ3Mzk2Mzd9.adkQBBaJN1EZhAtnEk8RSDBeCy2vnnCzs64dxBs6YPc
+
+### add a todo of a user
+POST http://localhost:5000/todo
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzU0NjUzMjM3LCJleHAiOjE3NTQ3Mzk2Mzd9.adkQBBaJN1EZhAtnEk8RSDBeCy2vnnCzs64dxBs6YPc
+Content-Type: application/json
+
+{
+    "task":"Complete this backend project"
+}
+
+### update the status of a Todo
+PUT http://localhost:5000/todo/2
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzU0NjUzMjM3LCJleHAiOjE3NTQ3Mzk2Mzd9.adkQBBaJN1EZhAtnEk8RSDBeCy2vnnCzs64dxBs6YPc
+Content-Type: application/json
+
+{
+    "completed":"1"
+}
+
+### delete a todo
+DELETE http://localhost:5000/todo/2
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzU0NjUzMjM3LCJleHAiOjE3NTQ3Mzk2Mzd9.adkQBBaJN1EZhAtnEk8RSDBeCy2vnnCzs64dxBs6YPc
+
