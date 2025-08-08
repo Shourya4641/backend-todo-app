@@ -23,7 +23,17 @@ router.post("/", (req, res) => {
 });
 
 // update a todo
-router.put("/:id", (req, res) => {});
+router.put("/:id", (req, res) => {
+  const { completed } = req.body;
+
+  const { id } = req.params;
+
+  const updatedTodo = db.prepare(`UPDATE todos SET completed = ? WHERE id = ?`);
+
+  updatedTodo.run(completed, id);
+
+  res.json({ message: "Todo completed" });
+});
 
 // delete a todo
 router.delete("/:id", (req, res) => {});
