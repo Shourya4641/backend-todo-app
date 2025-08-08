@@ -6,7 +6,7 @@ POST http://localhost:5000/auth/register
 Content-Type: application/json
 
 {
-    "username":"testuser4@gmail.com",
+    "username":"testuser1@gmail.com",
     "password":"123456"
 }
 
@@ -18,3 +18,7 @@ Content-Type: application/json
     "username":"testuser6@gmail.com",
     "password":"1234567"
 }
+
+### fetch all the todos of a user
+GET http://localhost:5000/todo
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzU0NjUxMjgyLCJleHAiOjE3NTQ3Mzc2ODJ9.iVsXdDQKzTKfSb9AGiW_ZhN4UTw3sCfYijGu-R4A1J4
